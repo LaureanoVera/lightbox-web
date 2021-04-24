@@ -67,13 +67,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-100%);
+  transform: translateY(100%);
+  transition: transform .4s ease-in;
 }
 
 .container-grid__img-show {
+  transform: scale(0);
+  transition: transform .25s .35s ease;
   height: 80%;
   width: auto;
   object-fit: cover;
+}
+
+.container-grid__img-show--scale {
+  transform: scale(1);
 }
 
 .container-grid__copy {
@@ -89,4 +96,8 @@ body {
   top: .5em;
   right: .8em;
   cursor: pointer;
+}
+
+.container-grid__img-move {
+  transform: translateY(0);
 }
